@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jarrett Lipman - Personal Portfolio & Professional Hub
 
-## Getting Started
+A modern, high-performance web application serving as the professional hub for Jarrett Lipman—Director of Bands at Vandegrift High School and Brass Caption Manager for the Boston Crusaders.
 
-First, run the development server:
+Built with Next.js 14, Tailwind CSS, and Framer Motion, this platform highlights his clinician history, judging experience, and academic publications, while offering directors an avenue to book instructional coaching sessions.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Features
+
+- **Modern Aesthetic**: A sleek, premium design built with Tailwind CSS, utilizing glassmorphism and subtle gradient overlays.
+- **Flawless Responsiveness**: Responsive fluid typography (`text-balance`), responsive column masonry grids, and optimized padding mappings across all device formats.
+- **High-Performance Video Interactivity**: Zero-latency custom YouTube embeds designed via proxy image states and dynamic Framer Motion play overlays.
+- **Architectural Scalability**: Monolithic data and rendering separated strictly by Clean Code methodologies into `src/data` (providers) and atomic single-responsibility modules (`src/components/sections`).
+- **CMS/Legacy Content Migrated**: Complete static reconstruction of legacy CMS articles routed securely into dynamic `[slug]` endpoints without breaking original URLs.
+- **Animations**: Subtle entry transitions and hover events orchestrated beautifully using `framer-motion`.
+
+## 🛠 Tech Stack
+
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Directory)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Language**: TypeScript
+
+## 📁 Project Structure
+
+```text
+src/
+├── app/                  # Next.js App Router endpoints (Pages & Layout)
+├── components/           # Reusable UI architecture
+│   ├── layout/           # Shared structures (Navbar, Footer abstractions)
+│   ├── sections/         # Abstracted modular single-responsibility features
+│   │   ├── about/        # Hero, Bio, Accolades segments
+│   │   ├── clinics/      # Pedagogy and operational breakdown
+│   │   └── history/      # Timeline and recursive dataset rendering
+│   └── ui/               # Standard atomics (Buttons, Cards, VideoPlayers)
+├── data/                 # Raw JSON matrices rendering the global UI state
+│   ├── history.ts        # Clinician and Adjudication timeline
+│   ├── news.ts           # Markdown mapped legacy CMS articles
+│   └── videos.ts         # YouTube media parameters
+└── lib/                  # Utilities (if any)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💻 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone https://github.com/your-username/jarrett-lipman.git
+   cd jarrett-lipman
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Install dependencies:
 
-## Deploy on Vercel
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Run the development server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 🏗 Build & Deploy
+
+This project is tailored for frictionless deployment on [Vercel](https://vercel.com/).
+
+To build locally and test the generated static/server components:
+
+```bash
+npm run build
+npm run start
+```
+
+---
+
+_Developed meticulously to support world-class music ensembles and pedagogy._
