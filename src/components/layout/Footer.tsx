@@ -63,7 +63,7 @@ export function Footer() {
           <p>
             Original Site Design by J. Garcia Creative Co.
             <br className="hidden lg:block" />
-            Rebuilt with Next.js for a modern aesthetic.
+            Rebuilt with Next.js by Matias Aguirre Correa.
           </p>
         </div>
       </div>

@@ -65,6 +65,18 @@ export function Navbar() {
     setIsOpen(false);
   }, [pathname]);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
   return (
     <header
       className={cn(
@@ -143,7 +155,7 @@ export function Navbar() {
       {/* Mobile Nav */}
       <div
         className={cn(
-          "fixed inset-0 top-[65px] bg-white z-40 lg:hidden overflow-y-auto transition-all duration-300 ease-in-out",
+          "fixed inset-0 bg-white z-40 lg:hidden overflow-y-auto transition-all duration-300 ease-in-out pt-24 pb-6",
           isOpen
             ? "opacity-100 translate-x-0"
             : "opacity-0 translate-x-full pointer-events-none",

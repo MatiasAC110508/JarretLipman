@@ -43,6 +43,14 @@ export function VideoPlaylist({
                 onClick={() => {
                   setActiveVideo(video);
                   setIsPlaying(true);
+                  if (
+                    typeof window !== "undefined" &&
+                    window.innerWidth < 1024
+                  ) {
+                    document
+                      .getElementById("video-player")
+                      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }
                 }}
                 className={`group relative flex gap-4 p-3 rounded-2xl transition-all duration-300 text-left items-center ${
                   isActive

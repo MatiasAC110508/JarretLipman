@@ -15,11 +15,12 @@ export function VideoPlayer({
 }) {
   return (
     <motion.div
+      id="video-player"
       initial={{ opacity: 0, x: -30 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7, delay: 0.1 }}
-      className="w-full lg:w-[65%] flex-shrink-0"
+      className="w-full lg:w-[65%] flex-shrink-0 scroll-mt-24"
     >
       <div className="group relative rounded-3xl overflow-hidden bg-brand-950 shadow-2xl shadow-brand-900/15 ring-1 ring-brand-900/5 transition-all duration-500 hover:shadow-brand-900/25">
         <div className="aspect-video relative flex flex-col">
