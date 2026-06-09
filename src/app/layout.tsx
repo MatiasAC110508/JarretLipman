@@ -15,17 +15,60 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Jarrett Lipman Clinician & Coach | Bandworx, LLC",
+  metadataBase: new URL("https://jarrettlipman.com"),
+  title: {
+    default: "Jarrett Lipman | Clinician, Coach & Music Educator",
+    template: "%s | Jarrett Lipman",
+  },
   description:
     "Book a clinic or coaching session with Jarrett Lipman. Bandworx works with directors and music teachers throughout Texas and across the US.",
+  keywords: [
+    "Jarrett Lipman",
+    "Bandworx",
+    "Music Clinician",
+    "Band Director",
+    "Texas Music Educator",
+    "Leadership Coach",
+    "Marching Band Consultant",
+    "Music Adjudicator",
+  ],
+  authors: [{ name: "Jarrett Lipman" }, { name: "Bandworx, LLC" }],
+  creator: "Jarrett Lipman",
   openGraph: {
-    title: "Jarrett Lipman Clinician & Coach | Bandworx, LLC",
+    title: "Jarrett Lipman | Clinician, Coach & Music Educator",
     description:
       "Book a clinic or coaching session with Jarrett Lipman. Bandworx works with directors and music teachers throughout Texas and across the US.",
-    type: "website",
-    locale: "en_US",
     url: "https://jarrettlipman.com",
-    siteName: "Bandworx, LLC",
+    siteName: "Jarrett Lipman / Bandworx",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/logo_primary.png", // Replace with a dedicated OG image if available
+        width: 1200,
+        height: 630,
+        alt: "Jarrett Lipman Bandworx Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jarrett Lipman | Clinician, Coach & Music Educator",
+    description:
+      "Texas-based music educator and clinician. Book your next band clinic or coaching session.",
+    creator: "@jarrettlipman",
+    images: ["/logo_primary.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
